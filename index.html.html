@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | น้องพีพี 🐶💜</title>
+    
+    <!-- Google Fonts: Mali (Cute Display) & Prompt (Readable Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,400;0,600;0,700;1,400&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        cute: ['Mali', 'cursive'],
+                        body: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        pastel: {
+                            purple: '#E6D7FF', // Soft purple background
+                            pink: '#FDE2E4',   // Soft pink accent
+                            dark: '#6B4C9A',   // Darker purple for text
+                            card: '#F8F5FF'    // Very light purple for cards
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #FDFBFF;
+            background-image: radial-gradient(#E6D7FF 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+        h1, h2, h3, h4, h5, h6, .font-cute {
+            font-family: 'Mali', cursive;
+        }
+        /* Custom scrollbar for cuteness */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #FDFBFF; }
+        ::-webkit-scrollbar-thumb { background: #D8B4E2; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #C595D5; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-purple-300 selection:text-purple-900 relative">
+
+    <!-- Background Decorative Blobs -->
+    <div class="fixed top-0 left-0 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob -z-10"></div>
+    <div class="fixed top-0 right-0 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000 -z-10"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-purple-100 shadow-sm py-3">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <a href="#" class="font-cute font-bold text-2xl text-pastel-dark flex items-center gap-2 hover:scale-105 transition-transform">
+                <span>Nong PP</span> 🐶
+            </a>
+            <div class="hidden md:flex gap-6 font-cute font-semibold text-pastel-dark/80">
+                <a href="#about" class="hover:text-pastel-dark hover:bg-purple-100 px-3 py-1 rounded-full transition-all">ประวัติส่วนตัว 🐾</a>
+                <a href="#education" class="hover:text-pastel-dark hover:bg-purple-100 px-3 py-1 rounded-full transition-all">การศึกษา 🎓</a>
+                <a href="#activities" class="hover:text-pastel-dark hover:bg-purple-100 px-3 py-1 rounded-full transition-all">กิจกรรม ✨</a>
+                <a href="#certificates" class="hover:text-pastel-dark hover:bg-purple-100 px-3 py-1 rounded-full transition-all">เกียรติบัตร 🏆</a>
+                <a href="#contact" class="hover:text-pastel-dark hover:bg-purple-100 px-3 py-1 rounded-full transition-all">ติดต่อ 📞</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-pastel-dark focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-sm border-b border-purple-100 font-cute text-center">
+            <a href="#about" class="block py-3 text-pastel-dark hover:bg-purple-50">ประวัติส่วนตัว 🐾</a>
+            <a href="#education" class="block py-3 text-pastel-dark hover:bg-purple-50">การศึกษา 🎓</a>
+            <a href="#activities" class="block py-3 text-pastel-dark hover:bg-purple-50">กิจกรรม ✨</a>
+            <a href="#certificates" class="block py-3 text-pastel-dark hover:bg-purple-50">เกียรติบัตร 🏆</a>
+            <a href="#contact" class="block py-3 text-pastel-dark hover:bg-purple-50">ติดต่อ 📞</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+            <!-- Profile Image Placeholder -->
+            <div class="relative w-48 h-48 sm:w-56 sm:h-56 mb-8 group">
+                <div class="absolute inset-0 bg-pastel-purple rounded-full rotate-6 group-hover:rotate-12 transition-transform duration-300 shadow-lg"></div>
+                <!-- เปลี่ยนรูปภาพตรงนี้โดยแก้ src เป็น URL รูปจริงของคุณ -->
+                <img src="https://placehold.co/400x400/E6D7FF/6B4C9A?font=Playfair+Display&text=Nong+PP" alt="น้องพีพี" class="absolute inset-0 w-full h-full object-cover rounded-full border-4 border-white shadow-md z-10">
+                <div class="absolute -bottom-2 -right-2 text-4xl z-20 animate-bounce">🐶</div>
+            </div>
+            
+            <h1 class="font-cute text-4xl sm:text-5xl font-bold text-pastel-dark mb-3">สวัสดีครับ! ผมชื่อ น้องพีพี 🐾</h1>
+            <h2 class="text-xl sm:text-2xl text-gray-600 font-medium mb-6">นายพีรวัส ผิวทอง (น้องพีพี)</h2>
+            
+            <div class="bg-white px-6 py-4 rounded-3xl border-2 border-dashed border-purple-300 shadow-sm max-w-2xl transform rotate-1 hover:rotate-0 transition-transform cursor-default">
+                <p class="font-cute text-lg sm:text-xl text-purple-700 italic font-semibold">
+                    "Create your own opportunities.<br>Do not wait for them to catch you." ✨
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-20">
+
+        <!-- Personal Info & Education Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="about">
+            
+            <!-- About Me Card -->
+            <section class="bg-pastel-card rounded-[40px] p-8 shadow-sm border border-purple-100 hover:shadow-md transition-shadow relative overflow-hidden">
+                <div class="absolute top-4 right-4 text-3xl opacity-50">🦴</div>
+                <h3 class="font-cute text-3xl font-bold text-pastel-dark mb-6 flex items-center gap-2">
+                    <span class="bg-purple-200 p-2 rounded-2xl">🐶</span> ข้อมูลส่วนตัว
+                </h3>
+                <!-- ใช้ฟอนต์น่ารัก (font-cute) สำหรับข้อมูลส่วนตัว -->
+                <ul class="space-y-4 text-lg font-cute text-purple-900">
+                    <li class="flex items-start gap-3"><span class="text-purple-400">🐾</span> <strong>ชื่อ-นามสกุล:</strong> นายพีรวัส ผิวทอง (น้องพีพี)</li>
+                    <li class="flex items-start gap-3"><span class="text-purple-400">🐾</span> <strong>อายุ:</strong> 18 ปี</li>
+                    <li class="flex items-start gap-3"><span class="text-purple-400">🐾</span> <strong>วันเกิด:</strong> 8 สิงหาคม พ.ศ. 2550</li>
+                    <li class="flex items-start gap-3"><span class="text-purple-400">🐾</span> <strong>สัญชาติ/เชื้อชาติ:</strong> ไทย / ไทย</li>
+                    <li class="flex items-start gap-3"><span class="text-purple-400">🐾</span> <strong>ศาสนา:</strong> พุทธ</li>
+                    <li class="flex items-start gap-3"><span class="text-purple-400">🐾</span> <strong>แผนการเรียน:</strong> วิทยาศาสตร์-คณิตศาสตร์</li>
+                    <li class="flex items-start gap-3"><span class="text-purple-400">🐾</span> <strong>กำลังศึกษา:</strong> สาขาวิชาสาธารณสุขชุมชน คณะสาธารณสุขและสหเวชศาสตร์<br>วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</li>
+                </ul>
+
+                <h4 class="font-cute text-2xl font-bold text-pastel-dark mt-8 mb-4 border-t border-purple-200 pt-6">
+                    ความสนใจ (Hobby) 🎨
+                </h4>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-white text-purple-700 px-4 py-2 rounded-full shadow-sm font-cute font-medium">📚 อ่านหนังสือ</span>
+                    <span class="bg-white text-purple-700 px-4 py-2 rounded-full shadow-sm font-cute font-medium">🎸 เล่นดนตรี</span>
+                    <span class="bg-white text-purple-700 px-4 py-2 rounded-full shadow-sm font-cute font-medium">🤝 ทำงานอาสาสมัคร</span>
+                </div>
+            </section>
+
+            <!-- Education Card -->
+            <section id="education" class="bg-white rounded-[40px] p-8 shadow-sm border border-pink-100 hover:shadow-md transition-shadow">
+                <h3 class="font-cute text-3xl font-bold text-pastel-dark mb-8 flex items-center gap-2">
+                    <span class="bg-pink-100 p-2 rounded-2xl text-pink-500">🎓</span> ประวัติการศึกษา
+                </h3>
+                
+                <div class="relative border-l-4 border-purple-200 ml-4 space-y-8 pb-4">
+                    <!-- Higher Education -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[14px] top-1 bg-purple-500 w-6 h-6 rounded-full border-4 border-white shadow group-hover:scale-125 transition-transform"></div>
+                        <h4 class="font-cute text-xl font-bold text-purple-800">ระดับอุดมศึกษา</h4>
+                        <p class="text-gray-600 font-medium mt-1">สาขาวิชาสาธารณสุขชุมชน คณะสาธารณสุขและสหเวชศาสตร์<br>วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</p>
+                        <div class="mt-2 inline-block bg-purple-100 text-purple-700 font-semibold px-4 py-1 rounded-full">
+                            กำลังศึกษา 🩺
+                        </div>
+                    </div>
+
+                    <!-- High School -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[14px] top-1 bg-purple-400 w-6 h-6 rounded-full border-4 border-white shadow group-hover:scale-125 transition-transform"></div>
+                        <h4 class="font-cute text-xl font-bold text-purple-800">ระดับมัธยมศึกษาตอนปลาย</h4>
+                        <p class="text-gray-600 font-medium mt-1">โรงเรียนวัดราชโอรส</p>
+                        <div class="mt-2 inline-block bg-purple-100 text-purple-700 font-semibold px-4 py-1 rounded-full">
+                            GPAX: 3.20 🌟
+                        </div>
+                    </div>
+
+                    <!-- Middle School -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[14px] top-1 bg-purple-300 w-6 h-6 rounded-full border-4 border-white shadow group-hover:scale-125 transition-transform"></div>
+                        <h4 class="font-cute text-xl font-bold text-purple-800">ระดับมัธยมศึกษาตอนต้น</h4>
+                        <p class="text-gray-600 font-medium mt-1">โรงเรียนวัดราชโอรส</p>
+                        <div class="mt-2 inline-block bg-purple-100 text-purple-700 font-semibold px-4 py-1 rounded-full">
+                            GPAX: 3.50 ✨
+                        </div>
+                    </div>
+
+                    <!-- Primary School -->
+                    <div class="relative pl-8 group">
+                        <div class="absolute -left-[14px] top-1 bg-pink-300 w-6 h-6 rounded-full border-4 border-white shadow group-hover:scale-125 transition-transform"></div>
+                        <h4 class="font-cute text-xl font-bold text-purple-800">ระดับประถมศึกษา</h4>
+                        <p class="text-gray-600 font-medium mt-1">โรงเรียนอนุบาลวัดนางนอง</p>
+                        <div class="mt-2 inline-block bg-pink-50 text-pink-600 font-semibold px-4 py-1 rounded-full border border-pink-200">
+                            GPAX: 3.00 🐣
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Activities Section -->
+        <section id="activities" class="pt-8">
+            <div class="text-center mb-12">
+                <h2 class="font-cute text-4xl font-bold text-pastel-dark inline-block relative">
+                    กิจกรรมที่โดดเด่น (Activities) 🌟
+                    <span class="absolute -top-4 -right-8 text-3xl animate-bounce">🐕</span>
+                </h2>
+                <p class="text-gray-500 mt-2">ประสบการณ์และการเรียนรู้ของน้องพีพี</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Activity 1 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-purple-50 group">
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-purple-500 mb-2 bg-purple-50 inline-block px-3 py-1 rounded-full">15-18 ตุลาคม 2567</div>
+                        <h3 class="font-cute text-xl font-bold text-pastel-dark mb-3 line-clamp-2">จิตอาสาศูนย์บริการสาธารณสุข 29 ช่วงนุชเนตร</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            ทำหน้าที่บริการบัตรคิวและวัดความดันโลหิต ได้ทักษะการบริการ จัดสรรเวลา และการใช้เครื่องมือ เพื่อนำประสบการณ์ไปพัฒนาการบริการในอนาคต 🏥
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Activity 2 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-purple-50 group">
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-pink-500 mb-2 bg-pink-50 inline-block px-3 py-1 rounded-full">25-27 ตุลาคม 2568</div>
+                        <h3 class="font-cute text-xl font-bold text-pastel-dark mb-3 line-clamp-2">ค่ายแกะฝันปั้นดาว ณ มธ. ศูนย์รังสิต</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            ได้พัฒนาทักษะการสื่อสารและการเข้าใจผู้อื่น ซึ่งสำคัญมากในการทำงานสายการแพทย์ เพื่อการทำงานที่เป็นระบบและเข้าใจผู้ป่วยมากขึ้น 🌟
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Activity 3 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-purple-50 group">
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-indigo-500 mb-2 bg-indigo-50 inline-block px-3 py-1 rounded-full">3-4 ธันวาคม 2567</div>
+                        <h3 class="font-cute text-xl font-bold text-pastel-dark mb-3 line-clamp-2">ผู้นำฝ่ายประชุมเชียร์ กีฬาสี ราชโอรสเกมส์ 2025</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            ปฏิบัติหน้าที่ผู้นำสแตนเชียร์ ได้ฝึกการเป็นผู้นำ การควบคุมคน และการทำงานร่วมกับผู้นำฝ่ายอื่นๆ อย่างเป็นระบบ 📣
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Activity 4 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-purple-50 group">
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-green-600 mb-2 bg-green-50 inline-block px-3 py-1 rounded-full">2-3 พฤศจิกายน 2567</div>
+                        <h3 class="font-cute text-xl font-bold text-pastel-dark mb-3 line-clamp-2">อบรมจากเพื่อนถึงเพื่อน เพื่อส่งเสริมสุขภาวะทางเพศ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            จัดโดยคณะแพทยศาสตร์ จุฬาฯ ได้เรียนรู้เพศศึกษา โรคติดต่อ วิธีป้องกันและการรักษา เพื่อนำไปต่อยอดให้ความรู้ชุมชนในอนาคต 🤝
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Activity 5 -->
+                <article class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-purple-50 group">
+                    <div class="p-6">
+                        <div class="text-xs font-bold text-yellow-600 mb-2 bg-yellow-50 inline-block px-3 py-1 rounded-full">15 กุมภาพันธ์ 2568</div>
+                        <h3 class="font-cute text-xl font-bold text-pastel-dark mb-3 line-clamp-2">ค่ายยุวอาสาศาสนิกสัมพันธ์ Religious Youth Service</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            ณ มูลนิธิสหพันธ์สันติภาพสากลฯ ได้รับความรู้เรื่องศาสนา การปฏิบัติตัว และการอยู่ร่วมกันของแต่ละศาสนา เพื่อพัฒนาความเป็นอยู่ในชุมชน 🕊️
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="pt-8">
+            <div class="bg-pastel-purple/20 rounded-[40px] p-8 sm:p-12 border border-purple-100">
+                <div class="text-center mb-10">
+                    <h2 class="font-cute text-4xl font-bold text-pastel-dark inline-block relative">
+                        เกียรติบัตร (Certificates) 🏆
+                        <span class="absolute -top-3 -left-8 text-3xl animate-pulse">✨</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Cert Items -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm flex items-center gap-4 hover:bg-purple-50 transition-colors border border-purple-50">
+                        <div class="bg-pink-100 text-pink-500 p-3 rounded-xl text-xl">📜</div>
+                        <div>
+                            <p class="font-cute font-bold text-purple-800 text-sm">อบรมส่งเสริมสุขภาวะทางเพศ</p>
+                            <p class="text-xs text-gray-500">คณะแพทยศาสตร์ จุฬาฯ (พ.ย. 67)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-2xl shadow-sm flex items-center gap-4 hover:bg-purple-50 transition-colors border border-purple-50">
+                        <div class="bg-blue-100 text-blue-500 p-3 rounded-xl text-xl">📜</div>
+                        <div>
+                            <p class="font-cute font-bold text-purple-800 text-sm">อาสาสมัครศูนย์บริการสาธารณสุข</p>
+                            <p class="text-xs text-gray-500">ศูนย์ฯ 29 ช่วงนุชเนตร (ต.ค. 67)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl shadow-sm flex items-center gap-4 hover:bg-purple-50 transition-colors border border-purple-50">
+                        <div class="bg-purple-100 text-purple-500 p-3 rounded-xl text-xl">📜</div>
+                        <div>
+                            <p class="font-cute font-bold text-purple-800 text-sm">ผู้มีคุณลักษณะอันพึงประสงค์</p>
+                            <p class="text-xs text-gray-500">มหาวิทยาลัยธรรมศาสตร์ (ต.ค. 68)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl shadow-sm flex items-center gap-4 hover:bg-purple-50 transition-colors border border-purple-50">
+                        <div class="bg-yellow-100 text-yellow-500 p-3 rounded-xl text-xl">🥇</div>
+                        <div>
+                            <p class="font-cute font-bold text-purple-800 text-sm">คนดี ศรี ร.อ. นักเรียนจิตอาสาดีเยี่ยม</p>
+                            <p class="text-xs text-gray-500">โรงเรียนวัดราชโอรส (ก.พ. 68)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-2xl shadow-sm flex items-center gap-4 hover:bg-purple-50 transition-colors border border-purple-50">
+                        <div class="bg-green-100 text-green-500 p-3 rounded-xl text-xl">📜</div>
+                        <div>
+                            <p class="font-cute font-bold text-purple-800 text-sm">ค่ายยุวอาสาศาสนิกสัมพันธ์</p>
+                            <p class="text-xs text-gray-500">มูลนิธิสหพันธ์สันติภาพสากล (ก.พ. 68)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="bg-white border-t border-purple-100 pt-16 pb-8 text-center mt-auto rounded-t-[50px] shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.05)]">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="font-cute text-3xl font-bold text-pastel-dark mb-8">ช่องทางการติดต่อ 📬</h2>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-12">
+                <!-- LINE -->
+                <a href="#" class="flex items-center gap-3 bg-[#00B900]/10 text-[#00B900] px-6 py-3 rounded-full hover:bg-[#00B900]/20 transition-colors w-full sm:w-auto justify-center">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 4.269 8.846 10.036 9.608.391.084.922.258 1.057.592.12.3.058.755.028 1.062l-.167 1.018c-.042.261-.194.814.717.432.909-.383 4.908-2.894 6.744-4.979C22.043 15.656 24 13.167 24 10.304z"/></svg>
+                    <span class="font-cute font-semibold text-lg">pxstapws_</span>
+                </a>
+                
+                <!-- Phone -->
+                <a href="tel:0933216885" class="flex items-center gap-3 bg-blue-50 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-100 transition-colors w-full sm:w-auto justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    <span class="font-cute font-semibold text-lg">093-321-6885</span>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:ppeearawatunderscore@gmail.com" class="flex items-center gap-3 bg-purple-50 text-purple-600 px-6 py-3 rounded-full hover:bg-purple-100 transition-colors w-full sm:w-auto justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span class="font-cute font-semibold text-lg hidden sm:block">Email</span>
+                    <span class="font-cute font-semibold text-lg sm:hidden text-sm">ppeearawatunderscore@gmail.com</span>
+                </a>
+            </div>
+
+            <p class="text-sm text-gray-400">
+                Created with 💜 by Nong PP 🐶<br>
+                <span class="text-xs mt-2 inline-block">Portfolio based on provided PDF data</span>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
